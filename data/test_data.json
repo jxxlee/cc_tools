@@ -1,0 +1,22 @@
+{
+    "Game 1" : 
+        {
+        "platform" : { "launch year" : "1989", "name" : "Atari Lynx"},
+        "title" : "Chip's Challenge",
+        "year" : "1989"
+        },
+
+    "Game 2" : 
+        {
+        "platform" : { "launch year" : "2003", "name" : "Steam"},
+        "title" : "Chip's Challenge 2",
+        "year" : "2015"
+        },
+
+    "Game 3" : 
+    {
+    "platform" : { "launch year" : "2006", "name" : "Riot Games"},
+    "title" : "League of Legends",
+    "year" : "2009"
+    }
+}
