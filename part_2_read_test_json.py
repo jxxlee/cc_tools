@@ -19,7 +19,6 @@ def make_game_library_from_json(json_data):
         # Make a new game
         game = test_data.Game()
 
-
         # Get data from current game
         game.title = game_data["title"]
         game.year = game_data["year"]
@@ -42,9 +41,6 @@ input_json_file = "data/test_data.json"
 
 with open("data/test_data.json", "r") as reader:
     test_json = json.load(reader)
-
-print("JSON data:")
-print(test_json)
 
 game_data = make_game_library_from_json(test_json)
 ### Begin Add Code Here ###
