@@ -29,13 +29,13 @@ def make_CC_data_from_JSON(json_data):
                 init_field = cc_data.CCMapTitleField(field["title"])
             elif field["type_val"] == 4:
                 coordinates = []
-                for val in field["traps"]:
+                for val in field["traps"]: #retrieve coordinates from array
                     init_coord = cc_data.CCTrapControl(val[0], val[1], val[2], val[3])
                     coordinates.append(init_coord)
                 init_field = cc_data.CCTrapControlsField(coordinates)
             elif field["type_val"] == 5:
                 coordinates = []
-                for val in field["clones"]:
+                for val in field["clones"]: #retrieve coordinates from array
                     init_coord = cc_data.CCCloningMachineControl(val[0], val[1], val[2], val[3])
                     coordinates.append(init_coord)
                 init_field = cc_data.CCCloningMachineControlsField(coordinates)
@@ -45,10 +45,12 @@ def make_CC_data_from_JSON(json_data):
                 init_field = cc_data.CCMapHintField(field["hint"])
             elif field["type_val"] == 10:
                 coordinates = []
-                for val in field["monsters"]:
+                for val in field["monsters"]: #retrieve coordinates fom array
                     init_coord = cc_data.CCCoordinate(val[0], val[1])
                     coordinates.append(init_coord)
                 init_field = cc_data.CCMonsterMovementField(coordinates)
+            else:
+                return("Error: field unrecognized")
             level.add_field(init_field)
         CCData.add_level(level)
     print (CCData)
